@@ -21,16 +21,18 @@ Le frontend écrit en Angular, fournit une interface graphique permettant de :
 
 Pour une expérience fluide, commencez par créer une nouvelle partie, puis récupérer la partie à partir du bouton présent en haut de page. 
 Pour afficher le classement, selectionnez la partie en cliquant sur celle-ci.
-Lors de l'ajout d'un joueur ou de la modification du score d'un joueur, assurez vous que la partie correspondante est selectionée.
+Lors de l'ajout d'un joueur ou de la modification du score d'un joueur, assurez vous que la partie correspondante est selectionnée.
 
-Pour lancer le frontend Angular, vous pouvez exécuter lancer le script suivant depuis le dossier racine du projet  : 
+Pour lancer le frontend Angular, vous pouvez exécuter le script suivant depuis le dossier racine du projet  : 
 ```bash
 ./start-frontend.sh
 ```
 
+Le frontend repond à l'url :  `http://127.0.0.1:4200`
+
 ## backend
 
-Le backend basé sur Ktor répond à l'url `http://127.0.0.1:8080` fournit les endpoints suivant : 
+Le backend basé sur Ktor répond à l'url `http://127.0.0.1:8080` et fournit les endpoints suivant : 
   * `/get-poker-game` : pour avoir la liste de toutes les parties ou `/get-poker-game/{pokerGameId}` :  pour recevoir les données d'une partie spécifique
   * `/create-poker-game` : qui nécessite l'envoie d'un objet *PokerGame(Id : string, name : String, players : [])* dans le corps de la requête, le seul champ obligatoire est le nom de la partie
   * `/delete-poker-game/{pokerGameIId}` : pour supprimer une partie
