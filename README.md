@@ -32,9 +32,9 @@ Pour lancer le frontend Angular, vous pouvez exécuter lancer le script suivant 
 
 Le backend basé sur Ktor répond à l'url `http://127.0.0.1:8080` fournit les endpoints suivant : 
   * `/get-poker-game` : pour avoir la liste de toutes les parties ou `/get-poker-game/{pokerGameId}` :  pour recevoir les données d'une partie spécifique
-  * `/create-poker-game` : qui nécessite l'envoie d'un objet *PokerGame(Id:string, name : String, players : [])* dans le corps de la requête, le seul champ obligatoire est le nom de la partie
+  * `/create-poker-game` : qui nécessite l'envoie d'un objet *PokerGame(Id : string, name : String, players : [])* dans le corps de la requête, le seul champ obligatoire est le nom de la partie
   * `/delete-poker-game/{pokerGameIId}` : pour supprimer une partie
-  * `/add-player/{pokerGameId}` : pour ajouter un joueur à une partie. Nécessite l'envoie d'un objet *Player(id:string, username::string, score:Int)* dans le corps de la requête, le seul champ obligatoire est username
+  * `/add-player/{pokerGameId}` : pour ajouter un joueur à une partie. Nécessite l'envoie d'un objet *Player(id : string, username : string, score : Int)* dans le corps de la requête, le seul champ obligatoire est username
   * `/update-player/poker-game/player/score?pokerGameId={pokerGameId}&playerId={playerId}` : nécessite l'envoie du score dans le corps de la requête
   * `/get-player-ranking?pokerGameId={pokerGameId}` : pour obtenir le classement des joueurs sur une partie
   * `/get-player-info?pokerGameId={pokerGameId}&playerId={playerId}` : pour obtenir les informations d'un joueur.
