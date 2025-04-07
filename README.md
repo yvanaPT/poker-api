@@ -28,11 +28,11 @@ Pour lancer le frontend Angular, vous pouvez exécuter le script suivant depuis 
 ./start-frontend.sh
 ```
 
-Le frontend repond à l'url :  `http://127.0.0.1:4200`
+Le frontend repond à l'url :  `http://localhost:4200`
 
 ## backend
 
-Le backend basé sur Ktor répond à l'url `http://127.0.0.1:8080` et fournit les endpoints suivant : 
+Le backend basé sur Ktor répond à l'url `http://localhost:8080` et fournit les endpoints suivant : 
   * `/get-poker-game` : pour avoir la liste de toutes les parties ou `/get-poker-game/{pokerGameId}` :  pour recevoir les données d'une partie spécifique
   * `/create-poker-game` : qui nécessite l'envoie d'un objet *PokerGame(Id : string, name : String, players : [])* dans le corps de la requête, le seul champ obligatoire est le nom de la partie
   * `/delete-poker-game/{pokerGameIId}` : pour supprimer une partie
